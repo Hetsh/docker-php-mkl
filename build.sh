@@ -18,7 +18,7 @@ if ! docker version &> /dev/null; then
 	exit -1
 fi
 
-APP_NAME="php-fpm-loaded"
+APP_NAME="php-fpm-mkl"
 docker build --tag "$APP_NAME" .
 
 if confirm_action "Test image?"; then

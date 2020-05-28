@@ -10,10 +10,10 @@ ExecStartPre=-/bin/docker create \
               --publish 9000:9000/tcp \
               --mount type=bind,source="/srv",target="/srv" \
               --mount type=bind,source=/etc/localtime,target=/etc/localtime,readonly \
-              --name php-fpm-loaded \
-              hetsh/php-fpm-loaded
-ExecStart=/bin/docker start --attach php-fpm-loaded
-ExecStop=/bin/docker stop php-fpm-loaded
+              --name php-fpm-mkl \
+              hetsh/php-fpm-mkl
+ExecStart=/bin/docker start --attach php-fpm-mkl
+ExecStop=/bin/docker stop php-fpm-mkl
 
 [Install]
 WantedBy=multi-user.target
