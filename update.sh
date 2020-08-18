@@ -25,7 +25,7 @@ update_pkg "php7-json" "PHP-JSON" "false" "$PKG_URL" "(\d+\.)+\d+-r\d+"
 update_pkg "php7-openssl" "PHP-OPENSSL" "false" "$PKG_URL" "(\d+\.)+\d+-r\d+"
 
 if ! updates_available; then
-	echo "No updates available."
+	#echo "No updates available."
 	exit 0
 fi
 
