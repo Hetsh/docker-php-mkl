@@ -22,6 +22,7 @@ update_image "hetsh/php-fpm" "PHP-FPM" "true" "(\d+\.)+\d+-\d+"
 # Packages
 PKG_URL="https://pkgs.alpinelinux.org/package/edge/community/x86_64"
 update_pkg "php7-json" "PHP-JSON" "false" "$PKG_URL" "(\d+\.)+\d+-r\d+"
+update_pkg "php7-ctype" "PHP-CTYPE" "false" "$PKG_URL" "(\d+\.)+\d+-r\d+"
 update_pkg "php7-openssl" "PHP-OPENSSL" "false" "$PKG_URL" "(\d+\.)+\d+-r\d+"
 
 if ! updates_available; then
