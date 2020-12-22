@@ -1,4 +1,4 @@
-# PHP-FPM
+# PHP MKL
 PHP FastCGI Process Manager, equipped with extensions for mkl website.
 
 ## Running the server
