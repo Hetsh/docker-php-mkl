@@ -16,8 +16,8 @@ source libs/docker.sh
 assert_dependency "jq"
 assert_dependency "curl"
 
-# Alpine Linux with PHP-FPM
-update_image "hetsh/php8-fpm" "PHP7 FPM" "true" "(\d+\.)+\d+-\d+"
+# Alpine Linux with PHP8-FPM
+update_image "hetsh/php8-fpm" "PHP8 FPM" "true" "(\d+\.)+\d+-\d+"
 
 # Packages
 PKG_URL="https://pkgs.alpinelinux.org/package/edge/community/x86_64"
