@@ -17,13 +17,12 @@ assert_dependency "jq"
 assert_dependency "curl"
 
 # Alpine Linux with PHP-FPM
-update_image "hetsh/php7-fpm" "PHP7 FPM" "true" "(\d+\.)+\d+-\d+"
+update_image "hetsh/php8-fpm" "PHP7 FPM" "true" "(\d+\.)+\d+-\d+"
 
 # Packages
 PKG_URL="https://pkgs.alpinelinux.org/package/edge/community/x86_64"
-update_pkg "php7-json" "PHP-JSON" "false" "$PKG_URL" "(\d+\.)+\d+-r\d+"
-update_pkg "php7-ctype" "PHP-CTYPE" "false" "$PKG_URL" "(\d+\.)+\d+-r\d+"
-update_pkg "php7-openssl" "PHP-OPENSSL" "false" "$PKG_URL" "(\d+\.)+\d+-r\d+"
+update_pkg "php8-ctype" "PHP8 CTYPE" "false" "$PKG_URL" "(\d+\.)+\d+-r\d+"
+update_pkg "php8-openssl" "PHP8 OPENSSL" "false" "$PKG_URL" "(\d+\.)+\d+-r\d+"
 
 if ! updates_available; then
 	#echo "No updates available."
