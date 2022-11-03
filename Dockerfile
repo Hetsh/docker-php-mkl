@@ -1,4 +1,4 @@
-FROM hetsh/php8-fpm:8.0.25-1
+FROM hetsh/php81-fpm:8.1.12-1
 RUN apk add --no-cache \
-        php8-ctype=8.0.25-r0 \
-        php8-openssl=8.0.25-r0
+        php81-ctype=8.1.12-r0 \
+        php81-openssl=8.1.12-r0

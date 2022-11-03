@@ -16,13 +16,13 @@ source libs/docker.sh
 assert_dependency "jq"
 assert_dependency "curl"
 
-# Alpine Linux with PHP8-FPM
-update_image "hetsh/php8-fpm" "PHP8 FPM" "true" "(\d+\.)+\d+-\d+"
+# Alpine Linux with PHP8.1-FPM
+update_image "hetsh/php81-fpm" "PHP8.1 FPM" "true" "(\d+\.)+\d+-\d+"
 
 # Packages
 PKG_URL="https://pkgs.alpinelinux.org/package/edge/community/x86_64"
-update_pkg "php8-ctype" "PHP8 CTYPE" "false" "$PKG_URL" "(\d+\.)+\d+-r\d+"
-update_pkg "php8-openssl" "PHP8 OPENSSL" "false" "$PKG_URL" "(\d+\.)+\d+-r\d+"
+update_pkg "php81-ctype" "PHP8.1 CTYPE" "false" "$PKG_URL" "(\d+\.)+\d+-r\d+"
+update_pkg "php81-openssl" "PHP8.1 OPENSSL" "false" "$PKG_URL" "(\d+\.)+\d+-r\d+"
 
 if ! updates_available; then
 	#echo "No updates available."
