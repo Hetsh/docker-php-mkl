@@ -1,4 +1,4 @@
-FROM hetsh/php83-fpm:8.3.16-1
+FROM hetsh/php83-fpm:8.3.17-1
 RUN apk add --no-cache \
-        php83-ctype=8.3.16-r0 \
-        php83-openssl=8.3.16-r0
+        php83-ctype=8.3.17-r0 \
+        php83-openssl=8.3.17-r0
