@@ -45,11 +45,11 @@ function find_tags {
 
 # Tags the image with all tags that were found
 function apply_tags {
-		for TAG in "${TAGS[@]}"; do
-			TAGGED_IMAGE="$IMG_NAME:$TAG"
-			docker tag "$IMG_ID" "$TAGGED_IMAGE"
-			echo "Tagged image: $TAGGED_IMAGE"
-		done
+	for TAG in "${TAGS[@]}"; do
+		TAGGED_IMAGE="$IMG_NAME:$TAG"
+		docker tag "$IMG_ID" "$TAGGED_IMAGE"
+		echo "Tagged image: $TAGGED_IMAGE"
+	done
 }
 
 IMG_NAME="hetsh/php-mkl"
@@ -74,13 +74,13 @@ case "$TASK" in
 	;;
 	# Build and push tagged image
 	"--upload")
-		if tag_exists "$IMG_NAME"; then
+		find_tags
+		if tags_exist "$IMG_NAME" "${TAGS[@]}"; then
 			echo "Image already exists, no need to upload!"
 			exit 0
 		fi
 
 		build_image
-		find_tags
 		apply_tags
 		for TAG in "${TAGS[@]}"; do
 			docker push "$IMG_NAME:$TAG"
