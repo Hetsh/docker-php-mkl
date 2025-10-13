@@ -17,7 +17,7 @@ assert_dependency "jq"
 assert_dependency "curl"
 
 # Updates
-update_image "hetsh/php84-fpm" "(\d+\.)+\d+-\d+" "Alpine Linux"
+update_image "hetsh/php84-fpm" "(\d+\.)+\d+-\d+" "PHP FPM"
 update_packages_apk "hetsh/php-mkl"
 if ! updates_available; then
 	echo "No updates available."
