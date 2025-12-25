@@ -1,5 +1,5 @@
-FROM hetsh/php84-fpm:8.4.16-1
-ARG LAST_UPGRADE="2025-12-20T11:33:22+01:00"
+FROM hetsh/php84-fpm:8.4.16-2
+ARG LAST_UPGRADE="2025-12-25T07:37:29+01:00"
 RUN apk upgrade && \
     apk add --no-cache \
         php84-ctype=8.4.16-r1 \
