@@ -6,5 +6,5 @@
 
 MAIN_ITEM="hetsh/php84-fpm"
 GIT_VERSION="$(git describe --tags --first-parent --abbrev=0)"
-update_image "hetsh/php84-fpm" "(\d+\.)+\d+-\d+" "PHP FPM"
+update_image "$MAIN_ITEM" "(\d+\.)+\d+-\d+" "PHP FPM"
 update_packages_apk "hetsh/php-mkl"
