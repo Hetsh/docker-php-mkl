@@ -5,7 +5,7 @@ PHP FastCGI Process Manager, equipped with extensions for mkl website.
 ```bash
 docker run --detach --publish 9000:9000 --mount type=bind,source="/path/to/app",target="/path/to/app" --name php-mkl hetsh/php-mkl
 ```
-The php source files of your app must to be mounted, so that FPM can access them.
+The php source files of your app must be mounted, so that FPM can access them.
 
 ## Stopping the container
 ```bash
