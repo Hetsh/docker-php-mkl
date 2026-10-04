@@ -1,5 +1,5 @@
-FROM hetsh/php85-fpm:8.5.11-1
-ARG LAST_UPGRADE="2026-09-27T14:36:55+02:00"
+FROM hetsh/php85-fpm:8.5.11-2
+ARG LAST_UPGRADE="2026-10-04T08:11:31+02:00"
 RUN apk upgrade --no-cache && \
 	apk add --no-cache \
 		php85-ctype=8.5.11-r0 \
